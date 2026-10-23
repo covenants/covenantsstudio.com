@@ -1,0 +1,49 @@
+:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#16181d;--muted:#5d636e;--rule:#e2e0d8;
+  --accent:#2f5d50;--accent-ink:#ffffff;--chip:#eef2ef;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0f1113;--panel:#171a1d;--ink:#eceae4;--muted:#a3a8b0;--rule:#262a2f;
+        --accent:#8cc7b4;--accent-ink:#0f1113;--chip:#1d2326;color-scheme:dark}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--rule)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.01em;color:var(--ink);text-decoration:none}
+.mark{width:28px;height:28px;border-radius:8px;background:var(--accent);display:grid;place-items:center;color:var(--accent-ink);font-weight:800;font-size:15px}
+nav.top a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:15px}
+nav.top a:hover{color:var(--ink)}
+.hero{padding:72px 0 40px}
+.hero h1{font-size:clamp(32px,6vw,52px);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em;text-wrap:balance;max-width:16ch}
+.hero p{font-size:19px;color:var(--muted);max-width:56ch;margin:0}
+h2.section{font-size:24px;margin:48px 0 20px;letter-spacing:-.01em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.card h3{margin:0;font-size:19px}
+.card p{margin:0;color:var(--muted);font-size:15.5px;flex:1}
+.chip{align-self:flex-start;font-size:12.5px;font-weight:600;background:var(--chip);color:var(--muted);border-radius:999px;padding:3px 10px}
+.chip.live{color:var(--accent)}
+.links{display:flex;gap:16px;font-size:15px;margin-top:6px;flex-wrap:wrap}
+.about{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:24px;margin-top:16px}
+.about p{margin:0 0 10px}
+footer{border-top:1px solid var(--rule);margin-top:64px;padding:28px 0 40px;color:var(--muted);font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+/* policy pages */
+main.doc{max-width:700px;margin:0 auto;padding:40px 20px 24px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+main.doc h1{font-size:clamp(28px,6vw,40px);line-height:1.15;margin:8px 0 6px}
+.meta{color:var(--muted);font-size:15px;margin:0 0 26px}
+.summary{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:18px 20px;margin-bottom:26px}
+.summary p{margin:0}
+main.doc h2{font-size:20px;margin:30px 0 6px;padding-top:22px;border-top:1px solid var(--rule)}
+main.doc p,main.doc ul,main.doc ol{margin:0 0 12px}
+main.doc ul,main.doc ol{padding-left:22px}
+code{font-size:.92em;overflow-wrap:anywhere}
+.back{display:inline-block;margin-bottom:18px;font-size:15px;text-decoration:none}
+@media (max-width:560px){nav.top a{margin-left:14px}.hero{padding-top:48px}}
